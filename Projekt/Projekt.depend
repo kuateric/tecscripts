@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1612724436 source:s:\05_verwaltung\024_programmierung\2021-02-19_treffen010_c++\geometry.cpp
+	"geometry.h"
+	<iostream>
+	<math.h>
+
+1612724436 s:\05_verwaltung\024_programmierung\2021-02-19_treffen010_c++\geometry.h
+	<vector>
+	<math.h>
+
+1613673386 source:s:\05_verwaltung\024_programmierung\2021-02-19_treffen010_c++\main.cpp
+	"geometry.h"
+	<iostream>
+	<fstream>
+	<iostream>
+	<string>
+	<vector>
+	<stdio.h>
+	<locale.h>
+	<sstream>
+	<cstdlib>
+	<bits/stdc++.h>
+
