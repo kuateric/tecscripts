@@ -1,0 +1,21 @@
+Summary, 
+to install OGS with MKL:
+ 
+step 1:
+```bat
+git clone https://gitlab.opengeosys.org/ogs/ogs.git
+```
+step 2: 
+```bat
+mkdir build
+cd build
+```
+step 3: 
+```bat
+cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DCMAKE_BUILD_TYPE=Release ../ogs
+
+```
+step 4:
+```bat
+make -j 2
+```
