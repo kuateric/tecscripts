@@ -22,6 +22,19 @@ step 4:
 make -j 2
 ```
 
+step 5: 
+```bat
+cd /home
+gedit .bashrc
+```
+add in `.bashrc` at the end of the file:
+
+```bat
+# OpenGeoSys
+export LD_LIBRARY_PATH="/home/tux/programs/ogs_releases/ogs-6.4.0/build/lib:$LD_LIBRARY_PATH"
+export PATH="/home/tux/programs/ogs_releases/ogs-6.4.0/build/bin:$PATH"
+```
+
 ## Installing Mfront 
 step 1:
 - Download Latest Version:
@@ -64,6 +77,19 @@ step 6:
 ```bat
 make install
 ```
+step 7: 
+```bat
+cd /home
+gedit .bashrc
+```
+add in `.bashrc` at the end of the file:
+
+```bat
+export PATH="/home/tux/programs/mfront/build/bin:$PATH" # mfront bin
+export LD_LIBRARY_PATH="/home/tux/programs/mfront/build/lib:$LD_LIBRARY_PATH" # mfront lib
+export PYTHONPATH="/home/tux/programs/mfront/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
+```
+
 ## Installing Owncloud 
 step 1: read the installation guide and check for updates
 
