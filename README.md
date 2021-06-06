@@ -107,3 +107,14 @@ sudo apt update
 sudo apt install owncloud-client
 ```
 
+## Installing VTUInterface
+
+```bat
+pip3 install -U git+https://github.com/joergbuchwald/VTUinterface
+```
+
+## Installing OGS6Py
+
+```bat
+pip3 install -U git+https://github.com/joergbuchwald/ogs6py
+```
