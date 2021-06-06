@@ -64,4 +64,19 @@ step 6:
 ```bat
 make install
 ```
+## Installing Owncloud 
+step 1: read the installation guide and check for updates
+https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/download/
+
+step 2:
+```bat
+wget -nv https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.10/Release.key -O - | sudo apt-key add -
+```
+
+step 3:
+```bat
+echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.10/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+sudo apt update
+sudo apt install owncloud-client
+```
 
