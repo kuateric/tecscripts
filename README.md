@@ -69,14 +69,14 @@ step 1: read the installation guide and check for updates
 
 https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/download/
 
-step 2:
+step 2: for ubuntu 20.04, for other os and version, check installation guide
 ```bat
-wget -nv https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.10/Release.key -O - | sudo apt-key add -
+wget -nv https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
 ```
 
-step 3:
+step 3: for ubuntu 20.04, for other os and version, check installation guide
 ```bat
-echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.10/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubuntu_20.04/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
 sudo apt update
 sudo apt install owncloud-client
 ```
