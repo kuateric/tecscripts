@@ -56,6 +56,12 @@ step 2:
 mkdir build
 cd build
 ```
+
+step 3-new: 
+```bat
+cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DCMAKE_BUILD_TYPE=Release ../ogs
+
+```
 step 3: 
 ```bat
 cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DCMAKE_BUILD_TYPE=Release ../ogs
