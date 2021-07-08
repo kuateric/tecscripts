@@ -57,12 +57,12 @@ mkdir build
 cd build
 ```
 
-step 3-new: 
+step 3 ohne Mfront: 
 ```bat
 cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 
 ```
-step 3: 
+step 3 mit Mfront: 
 ```bat
 cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 
