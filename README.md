@@ -74,7 +74,7 @@ make -j 2
 
 step 5: 
 ```bat
-cd /home
+cd /home/tux
 gedit .bashrc
 ```
 add in `.bashrc` at the end of the file:
