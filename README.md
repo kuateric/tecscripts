@@ -168,6 +168,11 @@ pip3 install -U git+https://github.com/joergbuchwald/VTUinterface
 pip3 install -U git+https://github.com/joergbuchwald/ogs6py
 ```
 
+## Installing MeshIO
+
+```bat
+pip3 install -U git+https://github.com/nschloe/meshio
+```
 
 ## Meshing procedure for OGS simulations
 This was tested for 2D-meshes. No warranty for 3D-meshes. 
