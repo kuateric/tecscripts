@@ -146,6 +146,11 @@ step 1:
 - Download Latest Version:
 https://sourceforge.net/projects/tfel/files/ 
 
+setp 1.1: update python
+```bat
+conda update -n myenv --all
+```
+
 step 2:
 - Create an mfront folder and open it
 ```bat
