@@ -172,8 +172,12 @@ sudo apt install libboost-python-dev
 step 4: 
 ```bat
 cmake /home/tux/programs/mfront/sources/tfel-3.4.0 -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/home/tux/programs/mfront/build
-
 ```
+for me:
+```bat
+cmake /home/eric/sources/mfront/tfel-3.4.2/source -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/home/eric/sources/mfront/tfel-3.4.2/build
+```
+
 step 5:
 ```bat
 make -j 2
