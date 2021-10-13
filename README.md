@@ -148,7 +148,7 @@ https://sourceforge.net/projects/tfel/files/
 
 setp 1.1: update python
 ```bat
-conda update -n myenv --all
+sudo env "PATH=$PATH" conda update --all
 ```
 
 step 2:
