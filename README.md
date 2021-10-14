@@ -125,7 +125,7 @@ cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DCMAKE_BU
 ```
 step 3 mit Mfront und MKL : 
 ```bat
-cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DCMAKE_BUILD_TYPE -DBUILD_SHARED_LIBS=Release ../ogs
+cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 
 ```
 step 4:
