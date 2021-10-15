@@ -429,7 +429,7 @@ sudo apt install cmake-curses-gui
 #### to install OGS:
 ##### step: create Opengeosys folder in /opt 
 ```bat
-cd /opt
+cd /opt/programme
 sudo mkdir opengeosys
 cd opengeosys
 ```
