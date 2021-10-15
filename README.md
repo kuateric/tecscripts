@@ -392,9 +392,17 @@ Otherwise please install Git with your favorite package manager:
 sudo apt-get install git
 ```
 
+Install Python 3 and pip:
+```bat
+sudo apt-get install python3 python3-pip
+```
+
 step: Install Ninja
 
 We recommend ninja as a cross-platform build tool (make-replacement).
+```bat
+sudo apt-get install ninja-build
+```
 
 Step: Install Conan package manager
 
