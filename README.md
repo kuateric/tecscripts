@@ -348,10 +348,17 @@ echo '/swap none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
 
-## Preparing Workstation 
+## Preparing Workstations 
 
 ### Installing MKL
-
+Update the package index:
+```bat
+sudo apt-get update
+```
+Install intel-mkl-full deb package:
+```bat
+sudo apt-get install intel-mkl-full
+```
 
 ### Installing OGS 
 
@@ -445,6 +452,7 @@ export PATH="/home/tux/programs/ogs_releases/ogs-6.4.0/build/bin:$PATH"
 
 
 ### Installing VSCode 
-step 1: download .deb file and install 
-step 2: jupyter ( 2 Pakete) 
-step 3: 
+step 1: download .deb file https://code.visualstudio.com/ and install 
+step 2: jupyter: Packages Jupyter, Jupyter Keymap, Jupyter Notebook Renderers  
+step 3: XML Tools Package
+step 4: Python, C/C++, Fortran package inside VSCode
