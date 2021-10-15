@@ -362,7 +362,7 @@ sudo apt-get install intel-mkl-full
 
 ### Installing OGS 
 
-Step: Install a compiler
+#### Step: Install a compiler
 
 On Debian-based (e.g. Ubuntu) you need to install the `build-essential`-package (which contains the `gcc`-compiler and the `make`-tool):
 
@@ -377,7 +377,7 @@ $ gcc --version
 gcc (GCC) 9.0.0
 ```
 
-Step: Install Git
+#### Step: Install Git
 
 Please check if Git is already installed:
 
@@ -392,60 +392,75 @@ Otherwise please install Git with your favorite package manager:
 sudo apt-get install git
 ```
 
-Install Python 3 and pip:
+#### Step: Install Python 3 and pip:
 ```bat
 sudo apt-get install python3 python3-pip
 ```
 
-step: Install Ninja
+#### step: Install Ninja
 
 We recommend ninja as a cross-platform build tool (make-replacement).
 ```bat
 sudo apt-get install ninja-build
 ```
 
-Step: Install Conan package manager
+#### Step: Install Conan package manager
 
 Install Conan (>= 1.34.0) with Python’s pip:
 
 ```bat
 pip3 install --user conan
 ```
-
 Check on a newly opened command line if Conan was installed successfully:
 
 ```bat
 $ conan --version
 Conan version 1.34.0
 ```
-
+#### Step: Install Cmake and Ccmake
 ```bat
-sudo apt-get install ninja-build
+sudo apt-get install cmake
 ```
 
-to install OGS:
- 
-step 1:
+```bat 
+sudo apt install cmake-curses-gui
+```
+
+#### to install OGS:
+##### step: create Opengeosys folder in /opt 
+```bat
+cd /opt
+sudo mkdir opengeosys
+cd opengeosys
+```
+##### step: create a folder for the installation 
+to be replicate each time a new installation, in this case we install the version 6.4.1
+```bat
+cd opengeosys
+sudo mkdir ogs-6.4.1
+cd ogs-6.4.1
+```
+
+##### step: clone ogs
 ```bat
 git clone https://gitlab.opengeosys.org/ogs/ogs.git
 ```
-step 2: 
+##### step: create the build folder 
 ```bat
 mkdir build
 cd build
 ```
 
-step 3 mit Mfront und MKL : 
+##### step: configure and generate OGS with Mfront and MKL : 
 ```bat
 cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
-
 ```
-step 4:
+##### step: compiling OGS 
 ```bat
 make -j 2
 ```
 
-step 5: 
+##### step: register ogs in the bashrc file or somewhere else 
 ```bat
 cd /home/tux
 gedit .bashrc
