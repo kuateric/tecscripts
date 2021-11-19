@@ -26,6 +26,17 @@ sudo apt-get purge --auto-remove paraview
 ```
  
 #### meshio
+meshio is to be installed locally.
+```bat
+pip install meshio 
+```
+Don't use the SUDO command 
+
+then install: 
+```bat
+pip install npx 
+```
+then add the  local/bin path in your baschrc file or do it globally 
 
 ![image](https://user-images.githubusercontent.com/22998049/142422914-d66e2546-8d36-4de5-b1fd-161b348ac1a2.png)
 
