@@ -173,6 +173,12 @@ pip install meshio
 ```
 Don't use the SUDO command 
 
+if already installed do: 
+```bat
+pip install meshio --upgrade
+```
+
+
 then install: 
 ```bat
 pip install npx 
