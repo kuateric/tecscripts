@@ -40,5 +40,16 @@ then add the  local/bin path in your baschrc file or do it globally
 
 ![image](https://user-images.githubusercontent.com/22998049/142422914-d66e2546-8d36-4de5-b1fd-161b348ac1a2.png)
 
+install branches of meshio:
+```
+pip install git+https://github.com/nschloe/meshio@flac-fix2 --force
+```
+
 #### ssh github settings 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLDbIjyIiW0zEKrdVrF4JmqxPU8C9rXy7nGuW8Ob2pC eric@X1-Linux-Simo
+
+#### Ordner freigeben in linux  
+```
+chmod -R 0777 *
+```
+
