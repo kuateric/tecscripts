@@ -187,3 +187,8 @@ then add the  local/bin path in your baschrc file or do it globally
 
 ![image](https://user-images.githubusercontent.com/22998049/142422914-d66e2546-8d36-4de5-b1fd-161b348ac1a2.png)
 
+
+
+delete folder and files quickly:
+![grafik](https://user-images.githubusercontent.com/22998049/167633203-c7c0f4b7-d2f9-42f4-a15c-71731a711784.png)
+
