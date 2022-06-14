@@ -1,6 +1,68 @@
 # tecscripts
 
 
+
+## Preparing OGS-Workstations NEU
+### step 1
+```bat
+sudo apt-get update
+```
+### step 2 
+sudo apt install build-essential git python3 python3-pip cmake cmake-curses-gui -j
+
+### to install OGS:
+##### step: create Opengeosys folder in /opt 
+```bat
+cd /opt/programme
+sudo mkdir opengeosys
+cd opengeosys
+```
+##### step: create a folder for the installation 
+to be replicate each time a new installation, in this case we install the version 6.4.1
+```bat
+cd opengeosys
+sudo mkdir ogs-6.4.2
+cd ogs-6.4.2
+```
+
+##### step: clone ogs
+```bat
+git clone https://gitlab.opengeosys.org/ogs/ogs.git
+```
+##### step: create the build folder 
+```bat
+mkdir build
+cd build
+```
+
+##### step: configure and generate OGS with Mfront and MKL : 
+```bat
+cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
+```
+##### step: configure and generate OGS with Mfront : 
+```bat
+cmake -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
+```
+##### step: compiling OGS 
+```bat
+make -j 2
+```
+
+##### step: register ogs in the bashrc file or somewhere else 
+```bat
+cd /home/tux
+gedit .bashrc
+```
+add in `.bashrc` at the end of the file:
+
+```bat
+# OpenGeoSys
+export LD_LIBRARY_PATH="/home/tux/programs/ogs_releases/ogs-6.4.2/build/lib:$LD_LIBRARY_PATH"
+export PATH="/home/tux/programs/ogs_releases/ogs-6.4.2/build/bin:$PATH"
+```
+
+
+
 ## Preparing OGS-Workstations 
 
 ### Installing MKL
