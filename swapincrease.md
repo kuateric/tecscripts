@@ -3,7 +3,7 @@ kopiert von: https://technik.blogbasis.net/linux-swap-erweitern-19-11-2013
 - Swap erstellen
 Zunächst erstellen wir mit Hilfe des „dd“-Kommandos eine neue Datei (/swap) mit der gewünschten Größe (hier: 1G * 4 = 4G):
 ```bat
-sudo dd if=/dev/zero of=/swap bs=1G count=4
+sudo dd if=/dev/zero of=/swap bs=1G count=16
 ```
 Die Größe lässt sich einfach über den „count“ Parameter im Gigabyte-Bereich verändern. Mit dem Parameter „bs“ lässt sich die Blöckgröße ändern. (z.B. 1M ; 1K …).
 
