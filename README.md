@@ -9,7 +9,7 @@ sudo apt-get update
 ```
 ### step 2 
 ```bat
-sudo apt install build-essential git python3 python3-pip cmake cmake-curses-gui -j
+sudo apt install build-essential git python3 python3-pip cmake cmake-curses-gui -y
 ```
 
 ### to install OGS:
