@@ -1,12 +1,27 @@
-## Installing MFront 
+## Installing MFront NEW
 step 1: sudo apt install libboost-python-dev gfortran
+
 step 2: cd /opt/programme
+
 step 3: mkdir mfront
-step 4: cd mfront 
-step 5: cmake /opt/programme/mfront/mfront-4.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.0/build
+
+step 4: cd mfront
+
+step 5: 
+
+```bat
+cmake /opt/programme/mfront/mfront-4.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.0/build
+```
 step 6: make -j 2
+
 step 7: make install
 
+step 8: input for .bashrc
+```bat
+#export PATH="/opt/programme/mfront/mfront-4.0/build/bin:$PATH" # mfront bin
+#export LD_LIBRARY_PATH="/opt/programme/mfront/mfront-4.0/build/lib:$LD_LIBRARY_PATH" # mfront lib
+#export PYTHONPATH="/opt/programme/mfront/mfront-4.0/tfel/mfront/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
+```
 
 
 ## Installing Mfront 
