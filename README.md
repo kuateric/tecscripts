@@ -7,9 +7,14 @@
 ```bat
 sudo apt-get update
 ```
-### step 2 
+### step 2 if not already installed 
 ```bat
 sudo apt install build-essential git python3 python3-pip cmake cmake-curses-gui -y
+```
+
+### step 2 if already installed (for PATCH DAY)
+```bat
+sudo apt upgrade build-essential git python3 python3-pip cmake cmake-curses-gui -y
 ```
 
 ### step 2 mkl 
