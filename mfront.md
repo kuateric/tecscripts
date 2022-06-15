@@ -37,25 +37,34 @@ step 7:
 git clone https://github.com/thelfer/tfel.git
 ```
 
-
 step 8: 
-
 ```bat
-cmake /opt/programme/mfront/mfront-4.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.0/build
+mkdir build
 ```
-step 9: 
 
+step 9: 
 ```bat
-make -j 2
+cd build
 ```
 
 step 10: 
 
 ```bat
+cmake /opt/programme/mfront/mfront-4.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.0/build
+```
+step 11: 
+
+```bat
+make -j 2
+```
+
+step 12: 
+
+```bat
 make install
 ```
 
-step 11: input for .bashrc
+step 13: input for .bashrc
 ```bat
 #export PATH="/opt/programme/mfront/mfront-4.0/build/bin:$PATH" # mfront bin
 #export LD_LIBRARY_PATH="/opt/programme/mfront/mfront-4.0/build/lib:$LD_LIBRARY_PATH" # mfront lib
