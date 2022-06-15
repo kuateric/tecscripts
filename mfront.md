@@ -1,7 +1,11 @@
 ## Installing MFront NEW
-step 1: 
+step 1: if not already installed 
 ```bat
 sudo apt install libboost-python-dev gfortran
+```
+step 1: if already installed 
+```bat
+sudo apt upgrade libboost-python-dev gfortran
 ```
 
 step 2: 
