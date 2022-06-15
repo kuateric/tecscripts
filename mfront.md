@@ -134,7 +134,9 @@ gedit .bashrc
 add in `.bashrc` at the end of the file:
 
 ```bat
-export PATH="/home/tux/programs/mfront/build/bin:$PATH" # mfront bin
-export LD_LIBRARY_PATH="/home/tux/programs/mfront/build/lib:$LD_LIBRARY_PATH" # mfront lib
-export PYTHONPATH="/home/tux/programs/mfront/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
+export PATH="/opt/programme/mfront/mfront-4.1.0/build/bin:$PATH" # mfront bin
+export LD_LIBRARY_PATH="/opt/programme/mfront/mfront-4.1.0/build/lib:$LD_LIBRARY_PATH" # mfront lib
+export PYTHONPATH="/opt/programme/mfront/mfront-4.1.0/tfel/mfront/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
+export PYTHONPATH=$(pwd):$PYTHONPATH
+
 ```
