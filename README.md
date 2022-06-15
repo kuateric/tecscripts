@@ -69,8 +69,8 @@ add in `.bashrc` at the end of the file:
 
 ```bat
 # OpenGeoSys
-export LD_LIBRARY_PATH="/home/tux/programs/ogs_releases/ogs-6.4.2/build/lib:$LD_LIBRARY_PATH"
-export PATH="/home/tux/programs/ogs_releases/ogs-6.4.2/build/bin:$PATH"
+export LD_LIBRARY_PATH="/opt/programme/opengeosys/ogs-6.4.2/build/lib:$LD_LIBRARY_PATH"
+export PATH="/opt/programme/opengeosys/ogs-6.4.2/build/bin:$PATH"
 ```
 
 
