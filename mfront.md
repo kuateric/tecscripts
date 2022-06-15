@@ -77,7 +77,7 @@ step 14: input for .bashrc
 ```bat
 
 ########################################################################
-### UNTERNEHMEN-STANDARD - in allen TEC-Rechner gleich - bitte benuetzen
+### UNTERNEHMEN-STANDARD - auf allen TEC-Rechnern gleich - bitte benuetzen
 ########################################################################
 ### mfront stand alone 
 export PATH="/opt/programme/mfront/mfront-4.1.0/build/bin:$PATH" # mfront bin
