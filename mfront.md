@@ -75,6 +75,10 @@ gedit .bashrc
 
 step 14: input for .bashrc
 ```bat
+
+########################################################################
+### UNTERNEHMEN-STANDARD - in allen TEC-Rechner gleich - bitte benuetzen
+########################################################################
 ### mfront stand alone 
 export PATH="/opt/programme/mfront/mfront-4.1.0/build/bin:$PATH" # mfront bin
 export LD_LIBRARY_PATH="/opt/programme/mfront/mfront-4.1.0/build/lib:$LD_LIBRARY_PATH" # mfront lib
