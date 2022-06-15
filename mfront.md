@@ -27,12 +27,12 @@ cd mfront
 step 5: 
 
 ```bat
-mkdir mfront-4.0
+mkdir mfront-4.1.0
 ```
 step 6: 
 
 ```bat
-cd mfront-4.0
+cd mfront-4.1.0
 ```
 
 step 7: 
@@ -54,7 +54,7 @@ cd build
 step 10: 
 
 ```bat
-cmake /opt/programme/mfront/mfront-4.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.0/build
+cmake /opt/programme/mfront/mfront-4.1.0/tfel -DCMAKE_BUILD_TYPE=Release -Denable-fortran=ON -Denable-python-bindings=ON -DCMAKE_INSTALL_PREFIX=/opt/programme/mfront/mfront-4.1.0/build
 ```
 step 11: 
 
