@@ -12,6 +12,11 @@ sudo apt-get update
 sudo apt install build-essential git python3 python3-pip cmake cmake-curses-gui -y
 ```
 
+### step 2 mkl 
+```bat
+sudo apt-get install intel-mkl-full
+```
+
 ### to install OGS:
 ##### step: create Opengeosys folder in /opt 
 ```bat
