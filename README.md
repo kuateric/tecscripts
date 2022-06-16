@@ -18,8 +18,15 @@ sudo apt upgrade build-essential git python3 python3-pip cmake cmake-curses-gui 
 ```
 
 ### step 2 mkl 
+install oneapi of intel: 
 ```bat
-sudo apt-get install intel-mkl-full
+wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18483/l_onemkl_p_2022.0.2.136_offline.sh
+
+sudo sh ./l_onemkl_p_2022.0.2.136_offline.sh
+```
+add to the bashrc-file 
+```bat
+source /opt/intel/oneapi/setvars.sh intel64
 ```
 
 ### to install OGS:
@@ -49,7 +56,7 @@ cd build
 
 ##### step: configure and generate OGS with Mfront and MKL : 
 ```bat
-cmake -DMKL_DIR=/usr/include/mkl -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
+cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 ```
 ##### step: configure and generate OGS with Mfront : 
 ```bat
