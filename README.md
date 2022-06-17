@@ -114,6 +114,11 @@ sudo apt install owncloud-client
 pip3 install -U git+https://github.com/joergbuchwald/VTUinterface
 ```
 
+### Installing VTUInterface. fix for vtk dependency issue
+```bat
+pip3 install -U git+https://github.com/joergbuchwald/VTUinterface --no-deps
+```
+
 ### Installing OGS6Py
 
 ```bat
