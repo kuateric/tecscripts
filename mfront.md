@@ -82,6 +82,6 @@ step 14: input for .bashrc
 ### mfront stand alone 
 export PATH="/opt/programme/mfront/mfront-4.1.0/build/bin:$PATH" # mfront bin
 export LD_LIBRARY_PATH="/opt/programme/mfront/mfront-4.1.0/build/lib:$LD_LIBRARY_PATH" # mfront lib
-export PYTHONPATH="/opt/programme/mfront/mfront-4.1.0/tfel/mfront/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
+export PYTHONPATH="/opt/programme/mfront/mfront-4.1.0/build/lib/python3.8/site-packages:$PATH" # mfront python bindings
 ```
 
