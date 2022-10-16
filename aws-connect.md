@@ -6,6 +6,9 @@ eric@X1-Linux-Simo:~/.../AWS$ ssh -i '/.../tecawskey2.pem' ubuntu@ec2-3-xx-xx-xx
 eric@X1-Linux-Simo:~/.../AWS$ scp -i ./tecawskey2.pem ./test.pdf ubuntu@ec2-3-xx-xx-xx.eu-central-1.compute.amazonaws.com:~
 ```
 
+```
+https://ubuntu.com/tutorials/ubuntu-desktop-aws#3-configuring-the-vnc-server
+```
 
 
 
