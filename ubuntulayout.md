@@ -12,6 +12,8 @@ mc in terminal to delete ,
 
 f10 in settings of the terminal deactivate 
 
+rmdir directory_name
+
 
 ![grafik](https://user-images.githubusercontent.com/22998049/195327148-4991a43a-6498-4414-b648-0a3ae7a33db7.png)
 ![ubuntu-layout](https://user-images.githubusercontent.com/22998049/195327778-16601d09-80d3-4d38-97fa-f74d84335515.PNG)
