@@ -24,3 +24,8 @@ echo 'deb https://download.owncloud.com/desktop/ownCloud/stable/latest/linux/Ubu
 sudo apt update
 sudo apt install owncloud-client
 ```
+
+### Um Konfigurations- und/oder Datendateien von owncloud und seinen Abhängigkeiten von Ubuntu zu löschen, führen Sie dann Folgendes aus:
+```
+sudo apt-get autoremove --purge owncloud
+```
