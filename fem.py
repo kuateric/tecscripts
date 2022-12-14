@@ -8,7 +8,7 @@ def forward(
         length=1.0,
         A=1.0,
         E=1.0,
-        max_iter=100,
+        max_iter=5,
         no_elements= 1,
         prescribed_displacement=1e-5,
         material_model="Hooke",
@@ -65,10 +65,10 @@ def forward(
     U[-1] = prescribed_displacement### TODO ### boundary conditions 
 
     # B-matrix for linear truss element
-    B = [-1/length_elements, 1/length_elements]### TODO ###
+    B = np.array([-1/length_elements, 1/length_elements])### TODO ###
 
     # Incremental displacement update
-    delta_u = 1e-7### TODO ###
+    delta_u = np.zeros(shape=(no_nodes, 1))### TODO ###
 
     iter_newton = 0
     error = 0
@@ -120,10 +120,17 @@ def forward(
         else:
             pass
 
+
+
+        
         # Solve reduced system
         if iter_newton == 0:
             P = np.zeros(shape=(no_nodes, 1))
             P[:, 0] = P[:, 0] - (K[:, -1] * U[-1]).T
+            #print(f"K:{K}")
+            #print(f"P:{P}")
+            print(f"U:{U}")
+            print(f"delta_u:{delta_u}")
             delta_u[1:-1] = np.linalg.solve(a=K[1:-1, 1:-1], b=(P[1:-1]))
 
         else:
@@ -151,12 +158,12 @@ def forward(
             stress[element] +=E * B@ U[node_1:node_2+1] ### TODO:done ###   E* strain[element]
 
         elif material_model == "St_Venant":
-            strain[element] = ### TODO ###
-            stress[element] = ### TODO ###
+            strain[element] =0 ### TODO ###
+            stress[element] =0 ### TODO ###
 
         elif material_model == "Neo_Hooke":
-            strain[element] = ### TODO ###
-            stress[element] = ### TODO ###
+            strain[element] =0 ### TODO ###
+            stress[element] =0 ### TODO ###
         else:
             raise ValueError("This material model is not implemented yet!")
 
@@ -206,7 +213,7 @@ if __name__ == "__main__":
             stresses[i] = out_dict["stress"][-2]
             strains[i] = out_dict["strain"][-2]
 
-        plt.plot(strain, stress)
+        plt.plot(strains, stresses)
 
     np.savetxt(fname="stresses.csv", X=stresses)
     np.savetxt(fname="strains.csv", X=strains)
