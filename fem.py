@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def forward(
+def forward(s
         length=1.0,
         A=1.0,
         E=1.0,
