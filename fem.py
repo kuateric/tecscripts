@@ -11,7 +11,7 @@ def forward(
         max_iter=5,
         no_elements= 1,
         prescribed_displacement=1e-5,
-        material_model="Hooke",
+        material_model="St_Venant",
         print_details=None,
 ):
     """Solve forward problem.
@@ -62,6 +62,7 @@ def forward(
 
     # Displacement vector
     U = np.zeros(shape=(no_nodes, 1)) ### TODO ###
+    print(f"U:{U}")
     U[-1] = prescribed_displacement### TODO ### boundary conditions 
 
     # B-matrix for linear truss element
@@ -88,7 +89,11 @@ def forward(
         elif material_model == "St_Venant":
             # Stiffness matrix assembly
             for element in range(no_elements):
-                K = np.zeros(shape=(no_nodes, no_nodes))### TODO ###
+                node_1,node_2 = t_nodes[element]
+                paul = U[node_1:node_2+1]
+                print(f"B:{B}")
+                print(f"paul:{paul}")
+                K[element:element+2, element:element + 2] = B.T@B*E*A*(1+3*B@U[node_1:node_2+1]+3/2*(B@U[node_1:node_2+1])**2)*length_elements### TODO ###
 
 
         elif material_model == "Neo_Hooke":
@@ -158,7 +163,7 @@ def forward(
             stress[element] +=E * B@ U[node_1:node_2+1] ### TODO:done ###   E* strain[element]
 
         elif material_model == "St_Venant":
-            strain[element] =0 ### TODO ###
+            strain[element] = 0  ### TODO ###
             stress[element] =0 ### TODO ###
 
         elif material_model == "Neo_Hooke":
@@ -193,7 +198,7 @@ if __name__ == "__main__":
     strains = np.zeros_like(displacements)
     stresses = np.zeros_like(displacements)
 
-    for material in ["Hooke"]:#, "St_Venant", "Neo_Hooke"]:
+    for material in ["St_Venant"]:#, "St_Venant", "Neo_Hooke"]:
         for i in range(displacements.size):
             youngs_modulus = 5000
             # noise = np.random.normal(
