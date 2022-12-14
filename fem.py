@@ -83,7 +83,7 @@ def forward(
         if material_model == "Hooke":
             # Stiffness matrix assembly
             for element in range(no_elements):
-                K[element:element+2, element:element + 2] = B.T * E * A * B * length_elements ### TODO ###
+                K[element:element+2, element:element + 2] += B.T * E * A @ B * length_elements ### TODO ###
 
         elif material_model == "St_Venant":
             # Stiffness matrix assembly
@@ -100,10 +100,11 @@ def forward(
             raise ValueError("This material model is not implemented yet!")
 
         # Calculate residual
-        R = 0.0 ### TODO ###
-        for element in range(no_elements):
-            Bu_e = ### TODO ###
-            R = B.T * E * A * Bu_e * length_elements ### TODO ###
+        R = np.zeros(shape=(no_nodes)) ### TODO ###
+        for element in range(no_elements): 
+            node_1,node_2 = t_nodes[element]
+            #Bu_e = ### TODO ###
+            R += B.T * E * A * B@ U[node_1:node_2+1]* length_elements ### TODO: done ###
 
         # Error is the norm of the residual
         error = np.linalg.norm(R[1:-1])
@@ -129,7 +130,7 @@ def forward(
             delta_u[1:-1] = np.linalg.solve(a=K[1:-1, 1:-1], b=-R[1:-1])
 
         # Update displacement
-        U = ### TODO ###
+        U +=  delta_u ### TODO: done ###
 
         # Maximum number of iteration test
         if iter_newton == max_iter - 1:
@@ -144,9 +145,10 @@ def forward(
     stress = np.zeros(shape=(no_nodes, 1))
 
     for element in range(no_elements):
-        if material_model == "Hooke":
-            strain[element] = ### TODO ###
-            stress[element] = ### TODO ###
+        node_1,node_2 = t_nodes[element]
+        if material_model == "Hooke": 
+            strain[element] +=B@ U[node_1:node_2+1] ### TODO:done ###
+            stress[element] +=E * B@ U[node_1:node_2+1] ### TODO:done ###   E* strain[element]
 
         elif material_model == "St_Venant":
             strain[element] = ### TODO ###
@@ -184,7 +186,7 @@ if __name__ == "__main__":
     strains = np.zeros_like(displacements)
     stresses = np.zeros_like(displacements)
 
-    for material in ["Hooke", "St_Venant", "Neo_Hooke"]:
+    for material in ["Hooke"]:#, "St_Venant", "Neo_Hooke"]:
         for i in range(displacements.size):
             youngs_modulus = 5000
             # noise = np.random.normal(
@@ -204,7 +206,7 @@ if __name__ == "__main__":
             stresses[i] = out_dict["stress"][-2]
             strains[i] = out_dict["strain"][-2]
 
-        plt.plot(  ### TODO ### )
+        plt.plot(strain, stress)
 
     np.savetxt(fname="stresses.csv", X=stresses)
     np.savetxt(fname="strains.csv", X=strains)
