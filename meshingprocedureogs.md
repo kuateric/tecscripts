@@ -8,6 +8,7 @@ This was tested for 2D-meshes. No warranty for 3D-meshes.
 meshio-convert youmesh.msh yourmesh.vtu 
 ```
 3. extract boundaries in paraview:
+open tunnel.vtu, use filter extract_edges to activate the lines from the mesh, select the boundary with selection tool, then use the filter extract_selection to extract the boundary from the bulk, then save the boundary as vtu with save data from files menu 
  
 ![image](https://user-images.githubusercontent.com/22998049/122689155-f2400380-d220-11eb-91c7-e6c8266274bc.png)
 
