@@ -67,6 +67,10 @@ source /opt/intel/oneapi/setvars.sh intel64
 ```bat
 cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 ```
+##### step: configure and generate OGS with Mfront and MKL with Ninja : 
+```bat
+cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release Ninja ../ogs
+```
 ##### step: configure and generate OGS with Mfront : 
 ```bat
 cmake -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
@@ -75,6 +79,16 @@ cmake -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../o
 ```bat
 make -j 2
 ```
+##### step: compiling OGS with Ninja
+download : https://github.com/joergbuchwald/mini-projects/blob/master/tools/fix_iomp5_linking.py 
+```bat
+python3 fix_iomp5_linking.py
+```
+
+```bat
+ninja -j 2
+```
+
 
 ##### step: register ogs in the bashrc file or somewhere else 
 ```bat
