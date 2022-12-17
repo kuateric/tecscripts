@@ -69,7 +69,7 @@ cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_
 ```
 ##### step: configure and generate OGS with Mfront and MKL with Ninja : 
 ```bat
-cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release Ninja ../ogs
+cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release -G Ninja ../ogs
 ```
 ##### step: configure and generate OGS with Mfront : 
 ```bat
