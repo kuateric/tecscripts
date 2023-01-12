@@ -52,4 +52,9 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLDbIjyIiW0zEKrdVrF4JmqxPU8C9rXy7nGuW8Ob2pC
 ```
 chmod -R 0777 *
 ```
+```
+chmod -R 0777 ./Non_equil_neue_Geom_Eric
+```
+
+
 
