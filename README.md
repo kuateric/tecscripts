@@ -75,6 +75,11 @@ cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_
 ```bat
 cmake -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../ogs
 ```
+##### step:  configure and generate OGS with Mfront and MKL with Ninja; add variables for MKL
+```bat
+cmake -DOGS_USE_MKL=ON -DOGS_USE_MFRONT=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DBLAS_iomp5_LIBRARY=/opt/intel/oneapi/compiler/2022.0.2/linux/compiler/lib/intel64_lin/libiomp5.so -DBLAS_mkl_core_LIBRARY=/opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_core.so -DBLAS_mkl_intel_lp64_LIBRARY=/opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_intel_lp64.so -DBLAS_mkl_intel_thread_LIBRARY=/opt/intel/oneapi/mkl/2022.0.2/lib/intel64/libmkl_intel_thread.so -G Ninja ../ogs 
+```
+
 ##### step: compiling OGS 
 ```bat
 make -j 2
